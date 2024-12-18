@@ -81,7 +81,7 @@ impl Committer {
         ));
         execute_and_commit_timings.commit_us = commit_time_us;
 
-        let commit_transaction_statuses = commit_results
+        let commit_transaction_statuses: Vec<CommitTransactionDetails> = commit_results
             .iter()
             .map(|commit_result| match commit_result {
                 // reports actual execution CUs, and actual loaded accounts size for

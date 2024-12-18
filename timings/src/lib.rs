@@ -334,6 +334,21 @@ impl ExecuteTimings {
             None => debug_assert!(idx < ExecuteTimingType::CARDINALITY, "Index out of bounds"),
         }
     }
+
+    pub fn accumulate_execute_units_and_time(&self) -> (u64, u64) {
+        self.details
+            .per_program_timings
+            .values()
+            .fold((0, 0), |(units, times), program_timings| {
+                (
+                    (Saturating(units)
+                        + program_timings.accumulated_units
+                        + program_timings.total_errored_units)
+                        .0,
+                    (Saturating(times) + program_timings.accumulated_us).0,
+                )
+            })
+    }
 }
 
 #[derive(Clone, Default, Debug)]

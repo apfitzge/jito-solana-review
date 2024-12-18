@@ -130,6 +130,7 @@ members = [
     "thin-client",
     "thread-manager",
     "timings",
+    "tip-distributor",
     "tls-utils",
     "tokens",
     "tps-client",
@@ -289,6 +290,8 @@ jemallocator = { package = "tikv-jemallocator", version = "0.6.0", features = [
 ] }
 js-sys = "0.3.77"
 jito-protos = { path = "jito-protos", version = "=2.2.9" }
+jito-tip-distribution = { path = "jito-programs/mev-programs/programs/tip-distribution", features = ["no-entrypoint"] }
+jito-tip-payment = { path = "jito-programs/mev-programs/programs/tip-payment", features = ["no-entrypoint"] }
 json5 = "0.4.1"
 jsonrpc-core = "18.0.0"
 jsonrpc-core-client = "18.0.0"
@@ -527,6 +530,7 @@ solana-rpc-client = { path = "rpc-client", version = "=2.2.9", default-features 
 solana-rpc-client-api = { path = "rpc-client-api", version = "=2.2.9" }
 solana-rpc-client-nonce-utils = { path = "rpc-client-nonce-utils", version = "=2.2.9" }
 solana-runtime = { path = "runtime", version = "=2.2.9" }
+solana-runtime-plugin = { path = "runtime-plugin", version = "=2.2.9" }
 solana-runtime-transaction = { path = "runtime-transaction", version = "=2.2.9" }
 solana-sbpf = "=0.10.0"
 solana-sdk = "2.2.2"
