@@ -3553,6 +3553,18 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "af150ab688ff2122fcef229be89cb50dd66af9e01a4ff320cc137eecc9bacc38"
 
 [[package]]
+name = "jito-protos"
+version = "2.2.9"
+dependencies = [
+ "bytes",
+ "prost",
+ "prost-types",
+ "protobuf-src",
+ "tonic",
+ "tonic-build",
+]
+
+[[package]]
 name = "jni"
 version = "0.19.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"

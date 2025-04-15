@@ -57,6 +57,7 @@ members = [
     "gossip",
     "inline-spl",
     "install",
+    "jito-protos",
     "keygen",
     "lattice-hash",
     "ledger",
@@ -285,6 +286,7 @@ jemallocator = { package = "tikv-jemallocator", version = "0.6.0", features = [
     "unprefixed_malloc_on_supported_platforms",
 ] }
 js-sys = "0.3.77"
+jito-protos = { path = "jito-protos", version = "=2.2.9" }
 json5 = "0.4.1"
 jsonrpc-core = "18.0.0"
 jsonrpc-core-client = "18.0.0"
