@@ -154,7 +154,13 @@ members = [
     "zk-token-sdk",
 ]
 
-exclude = ["anchor", "programs/sbf", "svm/examples", "svm/tests/example-programs"]
+exclude = [
+    "anchor",
+    "jito-programs",
+    "programs/sbf",
+    "svm/examples",
+    "svm/tests/example-programs",
+]
 
 resolver = "2"
 
