@@ -9432,6 +9432,24 @@ dependencies = [
 ]
 
 [[package]]
+name = "solana-runtime-plugin"
+version = "2.2.9"
+dependencies = [
+ "crossbeam-channel",
+ "json5",
+ "jsonrpc-core",
+ "jsonrpc-core-client",
+ "jsonrpc-derive",
+ "jsonrpc-ipc-server",
+ "jsonrpc-server-utils",
+ "libloading",
+ "log",
+ "solana-runtime",
+ "solana-sdk",
+ "thiserror 2.0.11",
+]
+
+[[package]]
 name = "solana-runtime-transaction"
 version = "2.2.9"
 dependencies = [
