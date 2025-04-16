@@ -3177,6 +3177,8 @@ impl Bank {
             transactions.iter(),
             transaction_results,
             tx_account_lock_limit,
+            None,
+            None,
         );
         TransactionBatch::new(lock_results, self, OwnedOrBorrowed::Borrowed(transactions))
     }
