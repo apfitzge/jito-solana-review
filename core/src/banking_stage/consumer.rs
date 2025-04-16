@@ -495,7 +495,9 @@ impl Consumer {
             transaction_qos_cost_results.iter().map(|r| match r {
                 Ok(_cost) => Ok(()),
                 Err(err) => Err(err.clone()),
-            })
+            }),
+            None,
+            None,
         ));
 
         // retryable_txs includes AccountInUse, WouldExceedMaxBlockCostLimit
