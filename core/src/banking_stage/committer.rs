@@ -13,17 +13,15 @@ use {
         vote_sender_types::ReplayVoteSender,
     },
     solana_runtime_transaction::transaction_with_meta::TransactionWithMeta,
-    solana_sdk::{pubkey::Pubkey, saturating_add_assign},
+    solana_sdk::saturating_add_assign,
     solana_svm::{
         transaction_commit_result::{TransactionCommitResult, TransactionCommitResultExtensions},
         transaction_processing_result::{
             TransactionProcessingResult, TransactionProcessingResultExtensions,
         },
     },
-    solana_transaction_status::{
-        token_balances::TransactionTokenBalancesSet, TransactionTokenBalance,
-    },
-    std::{collections::HashMap, sync::Arc},
+    solana_transaction_status::{token_balances::TransactionTokenBalancesSet, PreBalanceInfo},
+    std::sync::Arc,
 };
 
 #[derive(Clone, Debug, PartialEq, Eq)]
@@ -33,13 +31,6 @@ pub enum CommitTransactionDetails {
         loaded_accounts_data_size: u32,
     },
     NotCommitted,
-}
-
-#[derive(Default)]
-pub(super) struct PreBalanceInfo {
-    pub native: Vec<Vec<u64>>,
-    pub token: Vec<Vec<TransactionTokenBalance>>,
-    pub mint_decimals: HashMap<Pubkey, u8>,
 }
 
 #[derive(Clone)]

@@ -1,6 +1,6 @@
 use {
     super::{
-        committer::{CommitTransactionDetails, Committer, PreBalanceInfo},
+        committer::{CommitTransactionDetails, Committer},
         immutable_deserialized_packet::ImmutableDeserializedPacket,
         leader_slot_metrics::{
             CommittedTransactionsCounts, LeaderSlotMetricsTracker, ProcessTransactionsSummary,
@@ -40,6 +40,7 @@ use {
         transaction_processor::{ExecutionRecordingConfig, TransactionProcessingConfig},
     },
     solana_timings::ExecuteTimings,
+    solana_transaction_status::PreBalanceInfo,
     std::{
         num::Saturating,
         sync::{atomic::Ordering, Arc},
